@@ -5,7 +5,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
     if (err) {
        return console.log('Unable to connetct to mongodb server')
     }
-    console.log(' Connected to Mongno server')
+    console.log(' Connected to Mongno server');
 
 db.collection('Todos').insertOne({
 text: "Something to do",
@@ -14,7 +14,7 @@ text: "Something to do",
         if (err) {
             return console.log('unable to insert')
         }
-        console.log(JSON.stringify(result.ops, undefined, 2))
+        console.log(JSON.stringify(result.ops, undefined, 2));
 })
 db.collection('Users').insertOne({
     name: "Petr",
@@ -26,7 +26,7 @@ db.collection('Users').insertOne({
         }
         else {
             console.log('adding note succesfully')
-        }
+        };
 })
 db.close();
 })

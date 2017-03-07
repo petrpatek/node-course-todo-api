@@ -7,12 +7,12 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err,db) => {
     }
     console.log(' Connected to Mongno server');
 db.collection('Todos').find().toArray().then((docs) => {
-        console.log('Todos')
-    console.log(JSON.stringify(docs,undefined, 2))
+        console.log('Todos');
+    console.log(JSON.stringify(docs,undefined, 2));
 
 })
 db.collection('Users').find({name: 'Petr'}).toArray().then((docs) => {
-    console.log(JSON.stringify(docs, undefined, 2))
+    console.log(JSON.stringify(docs, undefined, 2));
 })
  //db.close();
 })
